@@ -1,3 +1,5 @@
+main{display: flex;}
+.Campo{background-color: #F2F3F4 ;}
 
  /* Resetear los márgenes y el relleno en todos los elementos */
 * {
