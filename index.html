@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Formulario Laura</title>
-       <link rel="stylesheet" href="estilos.css">
+    <title>Formulario Datos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <form action="codigo.php">
+    <form>
         <fieldset>
             <legend>Datos Personales</legend>
             <label> Nombre      : </label>
@@ -19,16 +19,16 @@
             <label> Email       :</label>
             <input type="email" placeholder="info@gmail.com" required class="Campo"> <br><br>
             <label>Nacionalidad :</label>
-            <select class="Campo">
+            <select class="Campo" required>
                 <option value="Argentina" class="Campo"> Argentina </option>
                 <option value="Brasilera" class="Campo"> Brasilera </option>
                 <option value="Chilena" class="Campo"> Chilena </option>
             </select> <br> <br>
             <fieldset>
-                <legend> Genero </legend>
-                    <label><input type="radio" name ="genero" value="Femenino"> Femenino </label>
-                    <label><input type="radio" name ="genero" value="Masculino"> Masculino </label>
-                    <label><input type="radio" name ="genero" value="Otro"> Otro </label>
+                <legend> Género </legend>
+                <label><input type="radio" name="genero" value="Femenino" required> Femenino </label>
+                <label><input type="radio" name="genero" value="Masculino" required> Masculino </label>
+                <label><input type="radio" name="genero" value="Otro" required> Otro </label>
             </fieldset> <br><br>
             <fieldset>
                 <legend>Domicilio</legend>
@@ -38,7 +38,13 @@
                 <input type="number" name="numero" class="Campo"> <br> <br>
             </fieldset>
         </fieldset>
-        <input type="button" value="Enviar">
+        <input type="submit" value="Enviar">
     </form>
+
+    <script>
+        function mostrarAlerta() {
+            alert("Datos enviados exitosamente");
+        }
+    </script>
 </body>
 </html>
